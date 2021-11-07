@@ -2,13 +2,13 @@ public class LinkedListMain {
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList();         //Creating object of LinkedList class
-        list.push(70);
+        list.push(56);
 
-        System.out.println("Before Adding");
+        System.out.println("Before Appending");
         list.show();
-        System.out.println("After Adding");
-        list.add(30);
-        list.add(56);
+        System.out.println("After Appending");
+        list.append(30);
+        list.append(70);
         list.show();
     }
 }
