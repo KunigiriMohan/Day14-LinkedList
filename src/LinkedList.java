@@ -2,9 +2,9 @@ class LinkedList {
 
     Node head;
     Node tail;
-/*
-* push() method to push elements to Nodes in linked list
-* */
+    /*
+     * push() method to push elements to Nodes in linked list
+     * */
     public Node push(int data) {
         Node newNode = new Node(data);      //Creating new node
         if (head == null) {
@@ -16,9 +16,9 @@ class LinkedList {
         }
         return newNode;
     }
-/*
-* show() method to show elements present in Linked List
-* */
+    /*
+     * show() method to show elements present in Linked List
+     * */
     public void show() {
         Node temp = head;
         if (head == null) {
@@ -28,6 +28,22 @@ class LinkedList {
                 System.out.print(temp.data + " ");
                 temp = temp.next;
             }
+        }
+    }
+    /*
+     * add() method to add data to Linked List
+     * */
+    void add(int data){
+        Node add1 = new Node(data);
+        if (head==null)
+        {
+            head=add1;
+            tail=add1;
+        }
+        else
+        {
+            add1.next=head;
+            head=add1;
         }
     }
 }
