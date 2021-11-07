@@ -31,12 +31,12 @@ class LinkedList {
         }
     }
     /*
-     * insert() method to insert value.
+     * pop() to delete first element.
      * */
-    void insert(int data) {
-        Node toAdd= new Node(data);
-        head.next=toAdd;
-        toAdd.next=tail;
+    void pop(int postion){
+        if (postion==0)
+        {
+            head=head.next;
+        }
     }
-
 }
