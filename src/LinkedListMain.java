@@ -6,11 +6,11 @@ public class LinkedListMain {
         list.push(30);
         list.push(56);
 
-        System.out.println("Before Deleting First element");
+        System.out.println("Before Deleting Last element");
         list.show();
         System.out.println();
-        System.out.println("After Deleting First element");
-        list.pop(0);
+        System.out.println("After Deleting Last element");
+        list.popLast();
         list.show();
     }
 }
