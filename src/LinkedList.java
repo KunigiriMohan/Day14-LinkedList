@@ -31,12 +31,26 @@ class LinkedList {
         }
     }
     /*
-     * pop() to delete first element.
+     * popLast() to delete last value in Linked List
      * */
-    void pop(int postion){
-        if (postion==0)
+    void popLast() {
+        if (head == null)                                       //before deleting last element checking length of Linked List
         {
-            head=head.next;
+            System.out.println("List is Empty");
+        }
+        else if (head != tail)
+        {
+            Node current = head;
+            while (current.next != tail)
+            {
+                current = current.next;
+            }
+            tail = current;
+            tail.next = null;
+        }
+        else
+        {
+            head = tail = null;
         }
     }
 }
