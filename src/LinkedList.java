@@ -31,7 +31,7 @@ class LinkedList {
         }
     }
     /*
-     * add() method to add data to Linked List
+     * append() method to append elements to Linked List
      * */
     void append(int data){
         Node add1 = new Node(data);
