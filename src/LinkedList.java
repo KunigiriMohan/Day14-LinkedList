@@ -31,22 +31,12 @@ class LinkedList {
         }
     }
     /*
-     * add() method to add data to Linked List
+     * insert() method to insert value.
      * */
-    void append(int data){
-        Node add1 = new Node(data);
-        if (head==null)
-        {
-            head=add1;
-        }
-        else
-        {
-            Node n =head;
-            while(n.next!=null)
-            {
-                n=n.next;
-            }
-            n.next=add1;
-        }
+    void insert(int data) {
+        Node toAdd= new Node(data);
+        head.next=toAdd;
+        toAdd.next=tail;
     }
+
 }
