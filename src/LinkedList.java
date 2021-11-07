@@ -33,17 +33,20 @@ class LinkedList {
     /*
      * add() method to add data to Linked List
      * */
-    void add(int data){
+    void append(int data){
         Node add1 = new Node(data);
         if (head==null)
         {
             head=add1;
-            tail=add1;
         }
         else
         {
-            add1.next=head;
-            head=add1;
+            Node n =head;
+            while(n.next!=null)
+            {
+                n=n.next;
+            }
+            n.next=add1;
         }
     }
 }
