@@ -53,4 +53,18 @@ class LinkedList {
             head = tail = null;
         }
     }
+    /*
+    * searchElement() method to check element present or not 
+    * */
+    public boolean searchElement(int data){
+        Node temp = head;
+        while (temp!=null){
+            if(temp.data==data)
+            {
+                return true;
+            }
+            temp=temp.next;
+        }
+        return false;
+    }
 }
