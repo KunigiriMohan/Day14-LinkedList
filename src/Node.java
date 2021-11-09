@@ -1,6 +1,6 @@
-/*
-* Creating Node class for creating Nodes
-* */
+/**
+ * Creating Node class for creating Nodes
+ */
 class Node {
     int data;       //declaring data variable of integer type
     Node next;      //declaring next variable of Node type
