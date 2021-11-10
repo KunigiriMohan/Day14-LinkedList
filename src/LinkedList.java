@@ -31,31 +31,24 @@ class LinkedList {
         }
     }
     /*
-     * popLast() to delete last value in Linked List
+     * add() method to add data to Linked List
      * */
-    void popLast() {
-        if (head == null)                                       //before deleting last element checking length of Linked List
+    void add(int data){
+        Node add1 = new Node(data);
+        if (head==null)
         {
-            System.out.println("List is Empty");
-        }
-        else if (head != tail)
-        {
-            Node current = head;
-            while (current.next != tail)
-            {
-                current = current.next;
-            }
-            tail = current;
-            tail.next = null;
+            head=add1;
+            tail=add1;
         }
         else
         {
-            head = tail = null;
+            add1.next=head;
+            head=add1;
         }
     }
     /*
-    * searchElement() method to check element present or not 
-    * */
+     * searchElement() method for searching element in a LinkedList
+     * */
     public boolean searchElement(int data){
         Node temp = head;
         while (temp!=null){
@@ -66,5 +59,22 @@ class LinkedList {
             temp=temp.next;
         }
         return false;
+    }
+    /*
+     * addElement() method adding element to LinkedList
+     * */
+    public void addElement(int number){
+        Node temp = head;
+        Node num = new Node(number);
+        while (temp!=null)
+        {
+            if (temp.data==30)
+            {
+                Node newNode=temp.next;
+                temp.next=num;
+                num.next=newNode;
+            }
+            temp =temp.next;
+        }
     }
 }
