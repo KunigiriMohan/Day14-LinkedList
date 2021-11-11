@@ -32,4 +32,18 @@ public class LinkedListTest {
             temp =temp.next;
         }
     }
+    @Test
+    public void deleteElement(){
+        Node temp=linkedList.head;
+        while (temp != null)
+        {
+            if (temp.next.data == 40)
+            {
+                assertEquals(4,linkedList.size());
+                temp.next=temp.next.next;
+                assertEquals(3,linkedList.size());
+            }
+            temp = temp.next;
+        }
+    }
 }
