@@ -2,6 +2,7 @@ class LinkedList {
 
     Node head;
     Node tail;
+
     /*
      * push() method to push elements to Nodes in linked list
      * */
@@ -16,6 +17,7 @@ class LinkedList {
         }
         return newNode;
     }
+
     /*
      * show() method to show elements present in Linked List
      * */
@@ -30,51 +32,75 @@ class LinkedList {
             }
         }
     }
+
     /*
      * add() method to add data to Linked List
      * */
-    void add(int data){
+    void add(int data) {
         Node add1 = new Node(data);
-        if (head==null)
-        {
-            head=add1;
-            tail=add1;
-        }
-        else
-        {
-            add1.next=head;
-            head=add1;
+        if (head == null) {
+            head = add1;
+            tail = add1;
+        } else {
+            add1.next = head;
+            head = add1;
         }
     }
+
     /*
      * searchElement() method for searching element in a LinkedList
      * */
-    public boolean searchElement(int data){
+    public boolean searchElement(int data) {
         Node temp = head;
-        while (temp!=null){
-            if(temp.data==data)
-            {
+        while (temp != null) {
+            if (temp.data == data) {
                 return true;
             }
-            temp=temp.next;
+            temp = temp.next;
         }
         return false;
     }
+
     /*
      * addElement() method adding element to LinkedList
      * */
-    public void addElement(int number){
+    public void addElement(int number) {
         Node temp = head;
         Node num = new Node(number);
-        while (temp!=null)
-        {
-            if (temp.data==30)
-            {
-                Node newNode=temp.next;
-                temp.next=num;
-                num.next=newNode;
+        while (temp != null) {
+            if (temp.data == 30) {
+                Node newNode = temp.next;
+                temp.next = num;
+                num.next = newNode;
             }
-            temp =temp.next;
+            temp = temp.next;
         }
+    }
+
+    /*
+     * deleteElement() method adding element to LinkedList
+     * */
+    public void deleteElement(int number) {
+        Node temp = head;
+        while (temp.next != null) {
+            if (temp.next.data == number)
+            {
+                temp.next=temp.next.next;
+            }
+            temp = temp.next;
+        }
+    }
+    /*
+     * size() method to check size of LinkedList
+     * */
+    public int size(){
+        Node temp = head;
+        int count =0;
+
+        while(temp!=null){
+            count++;
+            temp=temp.next;
+        }
+        return count;
     }
 }
