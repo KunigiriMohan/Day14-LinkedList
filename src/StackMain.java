@@ -9,6 +9,17 @@ public class StackMain {
         System.out.println("Elements in LinkedList in Queue");
 
         obj.printStack();               //printing data present inLinkedList in Queue order
+        System.out.println();
 
+        obj.deQueue();
+
+        System.out.println("Dequeue data in LinkedList First time ");
+        obj.printStack();
+        System.out.println();
+
+        obj.deQueue();
+
+        System.out.println("Dequeue data in LinkedList Second Time ");
+        obj.printStack();
     }
 }
